@@ -1,23 +1,15 @@
 #include<stdio.h>
 int main(){
-    float n,puissance,facto,x;
-    float somme=1.0;
+    float n,puissance=1,facto=1,x,somme=1.0;
+    int signe=-1;
     printf("Donnez n et x ");
     scanf("%f %f",&n,&x);
-    puissance=1;facto=1;
-    for(int i=1;i<=2*n;i++){
-        facto *= i;
-        puissance *= x;
-        if(i%2==0){
-            puissance *= -1;
-            somme += puissance/facto;
-        }     
+    for(int i=1;i<=n;i++){
+        facto = facto * 2*i * (2*i-1);
+        puissance = puissance * x * x;
+        somme += (signe*puissance)/facto;  
+        signe *= -1;
     }
     printf("%f\n",somme);
-    return 0;
+    return 0; 
 }
-/*
-n   x   S
-4   2
-3   0
-*/
