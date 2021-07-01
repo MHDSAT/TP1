@@ -6,6 +6,9 @@ int main(){
         printf("Taille ? ");
         scanf("%d",&taille);
     }while(taille<0);
+    printf("Entrez les elements\n");
+    for(int s=0;s<taille;s++)
+        scanf("%f",&tab1[s]);
     for(int ind=0;ind<taille;ind=ind+2){
         tab2[i]=tab1[ind];
         i++;
